@@ -3,6 +3,7 @@ import React, {Fragment, useState, useEffect} from 'react';
 import Loader from "./Loader"
 import ShuffleButton from "../assets/images/ice-breaker_button2.png"
 import "../assets/css/Buttons.css"
+import "../assets/css/Text.css"
 
 const ShuffleQuestions = () => {
 
@@ -51,19 +52,15 @@ const ShuffleQuestions = () => {
         if (loading === 'true') {
             return (
                 <div>
-                    {/* <diV className="results"></diV> */}
                     {showLoader && <Loader/>}
                     <diV className="results"></diV>
                 </div>)
         } else {
             return (
                 <div>
-                    {/* <diV className="results">
-                        <h3>{question}</h3>
-                    </diV> */}
                     <ShowShuffleButton/>
                     <diV className="results">
-                        <h3>{question}</h3>
+                        <h3 className="TextStyle">{question}</h3>
                     </diV>
                 </div>)
         }

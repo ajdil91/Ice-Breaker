@@ -3,6 +3,7 @@ import React, {Fragment, useEffect, useState} from "react";
 import DeleteQues from './DeleteQuestion'
 import EditQuestion from './EditQuestion'
 import "../assets/css/Table.css"
+import "../assets/css/Text.css"
 
 const ListQuestions = () => {
 
@@ -30,7 +31,7 @@ const ListQuestions = () => {
             <table class="table mt-5 text-center">
                 <thead>
                     <tr>
-                    <th className="RemoveOutline">Questions</th>
+                    <th className="RemoveOutline TextStyle">Questions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,6 +43,7 @@ const ListQuestions = () => {
                     ))}
                 </tbody>
             </table>
+            <div className="mb-10"></div>
         </Fragment>
     )
 }
