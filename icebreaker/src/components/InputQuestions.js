@@ -1,4 +1,6 @@
 import React, {Fragment, useState} from 'react';
+import "../assets/css/Buttons.css"
+import "../assets/css/Input.css"
 
 const InputQuestion = () => {
     const [question, setQuestion] = useState("")
@@ -20,10 +22,11 @@ const InputQuestion = () => {
 
     return (
         <Fragment>
-            <h4 className="text-center mt-5">Input Question</h4>
-            <form className="d-flex mt-5" onSubmit={onSubmitQues}>
-                <input type="text" className="form-control" value={question} onChange={e => setQuestion(e.target.value)}></input>
-                <button className="btn btn-primary">Add</button>
+            <form className="input-group d-flex mt-5" onSubmit={onSubmitQues}>
+                <input type="text"  placeholder="Add a question" className="form-control AddInput" value={question} onChange={e => setQuestion(e.target.value)}></input>
+                <div className="input-group-append">
+                    <button className="btn Add">Add</button>
+                </div>     
             </form>
         </Fragment>
     )

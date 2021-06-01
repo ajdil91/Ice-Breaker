@@ -26,7 +26,7 @@ const EditQuestion = ({ques_obj}) => {
     return (
         <Fragment>
             <form className="d-flex">
-                <input type="text" className="form-control" defaultValue={ques_obj.question} onChange={e => setQuestion(e.target.value)} onKeyPress={e => EditQues(e)} />
+                <input type="text" className="form-control AddInput" defaultValue={ques_obj.question} onChange={e => setQuestion(e.target.value)} onKeyPress={e => EditQues(e)} />
                 {/* <button className="btn btn-primary" style="visibility:hidden;" onClick={e => EditQues(e)}>Edit</button> */}
             </form>
         </Fragment>

@@ -1,0 +1,11 @@
+.AddInput {
+    color: white;
+    background-color: darkslateblue;
+    opacity: 0.4;
+    border-style: none;
+    /* -webkit-input-placeholder: white; */
+}
+.AddInput::-webkit-input-placeholder {
+    color: white;
+    opacity: 1;
+  }

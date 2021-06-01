@@ -1,0 +1,18 @@
+.DeleteButton {
+    color:blueviolet;
+    background-color: transparent;
+    border-style: none;
+}
+
+.Add {
+    color: #fff;
+    background-color: blueviolet;
+    border-color: blueviolet;
+}
+
+.results {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}

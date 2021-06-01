@@ -3,8 +3,6 @@ import loader from "../assets/images/ice-breaker_loader.gif"
 
 const Loader = () => {
 
-    // loader = "./assets/images/ice-breaker_loader.gif"
-
     return (
         <Fragment>
             {/* <div className="text-center mt-5"> */}

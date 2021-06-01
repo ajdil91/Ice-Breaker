@@ -1,4 +1,7 @@
 import React, {Fragment} from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons'
+import "../assets/css/Buttons.css"
 
 const DeleteQues = ({questions, ques, setQuestions}) => {
 
@@ -18,7 +21,7 @@ const DeleteQues = ({questions, ques, setQuestions}) => {
 
     return (
         <Fragment>
-            <button className="btn btn-danger" onClick={()=> DeleteQuestion(ques.id) }>Delete</button>
+            <button className="DeleteButton" onClick={()=> DeleteQuestion(ques.id) }><FontAwesomeIcon icon={faTrashAlt}/></button>
         </Fragment>
     )
 }

@@ -1,6 +1,8 @@
 import React, {Fragment, useState, useEffect} from 'react';
 
 import Loader from "./Loader"
+import ShuffleButton from "../assets/images/ice-breaker_button2.png"
+import "../assets/css/Buttons.css"
 
 const ShuffleQuestions = () => {
 
@@ -37,16 +39,32 @@ const ShuffleQuestions = () => {
         }
     }
 
+    const ShowShuffleButton = () => {
+        return (
+            <button onClick={e => randomizeQuestions(e)} style={{"background-color": "transparent", "border-style": "none"}}>
+                <img src={ShuffleButton} style={{width:'250px'}}/>
+            </button>
+        )
+    }
+
     const ShowResult = () => {
         if (loading === 'true') {
             return (
                 <div>
+                    {/* <diV className="results"></diV> */}
                     {showLoader && <Loader/>}
+                    <diV className="results"></diV>
                 </div>)
         } else {
             return (
                 <div>
-                    <h3>{question}</h3>
+                    {/* <diV className="results">
+                        <h3>{question}</h3>
+                    </diV> */}
+                    <ShowShuffleButton/>
+                    <diV className="results">
+                        <h3>{question}</h3>
+                    </diV>
                 </div>)
         }
     }
@@ -62,8 +80,7 @@ const ShuffleQuestions = () => {
     return (
         <Fragment>
             <diV className="container mt-5 text-center">
-                { result ? <ShowResult/> : null }
-                <button className="btn btn-warning mt-3" onClick={e => randomizeQuestions(e)}>Shuffle</button>              
+                { result ? <ShowResult/> : <ShowShuffleButton/> }
             </diV>
         </Fragment>
     )

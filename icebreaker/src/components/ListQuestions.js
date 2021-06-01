@@ -2,6 +2,7 @@ import React, {Fragment, useEffect, useState} from "react";
 
 import DeleteQues from './DeleteQuestion'
 import EditQuestion from './EditQuestion'
+import "../assets/css/Table.css"
 
 const ListQuestions = () => {
 
@@ -29,17 +30,14 @@ const ListQuestions = () => {
             <table class="table mt-5 text-center">
                 <thead>
                     <tr>
-                    <th scope="col">Questions</th>
-                    {/* <th scope="col">Edit</th> */}
-                    <th scope="col">Delete</th>
+                    <th className="RemoveOutline">Questions</th>
                     </tr>
                 </thead>
                 <tbody>
                     {questions.map(ques => (
                         <tr key={ques.id}>
-                            {/* <td scope="row">{ques.question}</td> */}
-                            <td><EditQuestion ques_obj={ques}/></td>
-                            <td><DeleteQues ques={ques} questions={questions} setQuestions={setQuestions}/></td>
+                            <td className="RemoveOutline"><EditQuestion ques_obj={ques}/></td>
+                            <td className="RemoveOutline"><DeleteQues ques={ques} questions={questions} setQuestions={setQuestions}/></td>
                         </tr>
                     ))}
                 </tbody>
