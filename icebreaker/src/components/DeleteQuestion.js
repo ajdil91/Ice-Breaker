@@ -8,7 +8,7 @@ const DeleteQues = ({questions, ques, setQuestions}) => {
     const DeleteQuestion = async id => {
         console.log(id)
         try { 
-            const deleteQues = await fetch(`http://localhost:5000/questions/${id}`, {
+            const deleteQues = await fetch(`/questions/${id}`, {
                     method: "DELETE"
                 });
 

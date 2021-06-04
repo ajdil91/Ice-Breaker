@@ -14,7 +14,7 @@ const ShuffleQuestions = () => {
 
     const getQuestions = async() => {
         try {
-            const response = await fetch("http://localhost:5000/questions")
+            const response = await fetch("/questions")
             const jsonData = await response.json()
 
             setQuestions(jsonData)

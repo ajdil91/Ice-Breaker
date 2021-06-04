@@ -9,7 +9,7 @@ const InputQuestion = () => {
         e.preventDefault();
         try {
             const body = {question};
-            const response = await fetch("http://localhost:5000/questions", {
+            const response = await fetch("/questions", {
                 method: "POST",
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(body)

@@ -10,7 +10,7 @@ const EditQuestion = ({ques_obj}) => {
             e.preventDefault()
             try {
                 const body = {question}
-                const response = await fetch(`http://localhost:5000/questions/${ques_obj.id}`, {
+                const response = await fetch(`/questions/${ques_obj.id}`, {
                     method: "PUT",
                     headers: {"Content-Type": "application/json"},
                     body: JSON.stringify(body)
