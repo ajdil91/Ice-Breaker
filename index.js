@@ -78,9 +78,9 @@ app.delete("/questions/:id", async(req, res) => {
 });
 
 // catchall method (in case user tries to access a path that doesn't exist)
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "icebreaker/build/index.html"));
-});
+// app.get("*", (req, res) => {
+//     res.sendFile(path.join(__dirname, "icebreaker/build/index.html"));
+// });
 
 app.listen(PORT, () => {
     console.log(`server has started on port ${PORT}`)
