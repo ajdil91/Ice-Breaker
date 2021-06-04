@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 if (process.env.NODE_ENV === "production") {
-    app.use(express.static(path.join(__dirname, "client/build")))
+    app.use(express.static(path.join(__dirname, "icebreaker/build")))
 }
 
 //ROUTES//
@@ -79,7 +79,7 @@ app.delete("/questions/:id", async(req, res) => {
 
 // catchall method (in case user tries to access a path that doesn't exist)
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client/build/index.html"));
+    res.sendFile(path.join(__dirname, "icebreaker/build/index.html"));
 });
 
 app.listen(PORT, () => {

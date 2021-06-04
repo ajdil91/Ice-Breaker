@@ -1,7 +1,6 @@
 import React, {Fragment, useState} from 'react'
 
 const EditQuestion = ({ques_obj}) => {
-    console.log(ques_obj)
 
     const [question, setQuestion] = useState()
     
@@ -27,7 +26,6 @@ const EditQuestion = ({ques_obj}) => {
         <Fragment>
             <form className="d-flex">
                 <input type="text" className="form-control AddInput" defaultValue={ques_obj.question} onChange={e => setQuestion(e.target.value)} onKeyPress={e => EditQues(e)} />
-                {/* <button className="btn btn-primary" style="visibility:hidden;" onClick={e => EditQues(e)}>Edit</button> */}
             </form>
         </Fragment>
     )

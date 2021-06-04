@@ -8,7 +8,6 @@ import "../assets/css/Text.css"
 const ListQuestions = () => {
 
     const [questions, setQuestions] = useState([]);
-    console.log(questions)
 
     const getQuestions = async() => {
         try {
